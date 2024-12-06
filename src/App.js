@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Button, Typography, Box, CircularProgress } from '@mui/material';
+import { Container, Button, Typography, Box, CircularProgress, LinearProgress } from '@mui/material';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -82,7 +82,7 @@ function App() {
 
         {loading && (
           <Box sx={{ marginTop: 2 }}>
-            <CircularProgress size={60} thickness={6} />
+            <LinearProgress size={60} thickness={6} />
           </Box>
         )}
 
@@ -93,7 +93,7 @@ function App() {
               alt="Uploaded"
               style={{
                 maxWidth: '100%',
-                width: '500px', // Fixed width for preview
+                width: '300px', // Fixed width for preview
                 height: 'auto', // Auto adjusts the height to maintain aspect ratio
               }}
             />
